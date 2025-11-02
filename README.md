@@ -1,3 +1,3 @@
 # testkit-go
 
-Utilities and mocks for testing the `cmd-stream-go` ecosystem.
+Mocks and test utilities for the `cmd-stream-go` ecosystem.
