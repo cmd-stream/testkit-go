@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/cmd-stream/core-go"
-	rcvr "github.com/cmd-stream/testkit-go/fixtures/cmdstream/receiver"
-	"github.com/cmd-stream/testkit-go/fixtures/cmdstream/results"
+	rcvr "github.com/cmd-stream/testkit-go/receiver"
+	"github.com/cmd-stream/testkit-go/results"
 )
 
 type Cmd struct {

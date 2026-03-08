@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/cmd-stream/core-go"
-	"github.com/cmd-stream/testkit-go/fixtures/cmdstream/cmds"
-	rcvr "github.com/cmd-stream/testkit-go/fixtures/cmdstream/receiver"
+	"github.com/cmd-stream/testkit-go/cmds"
+	rcvr "github.com/cmd-stream/testkit-go/receiver"
 	"github.com/cmd-stream/transport-go"
 	"github.com/mus-format/dts-stream-go"
 	"github.com/mus-format/mus-stream-go/ord"

@@ -3,9 +3,9 @@ package codecs
 import (
 	"encoding/json"
 
-	cmdstream_codec "github.com/cmd-stream/cmd-stream-go/codec"
+	cscodec "github.com/cmd-stream/cmd-stream-go/codec"
 	"github.com/cmd-stream/core-go"
-	"github.com/cmd-stream/testkit-go/fixtures/cmdstream/cmds"
+	"github.com/cmd-stream/testkit-go/cmds"
 	com "github.com/mus-format/common-go"
 	"github.com/mus-format/dts-stream-go"
 	"github.com/mus-format/mus-stream-go/ord"
@@ -28,7 +28,7 @@ func MultiCmdSize(seq core.Seq, cmd cmds.MultiCmd) (size int) {
 }
 
 func ResultSize(seq core.Seq, result core.Result) (size int) {
-	size = cmdstream_codec.SeqMUS.Size(seq)
+	size = cscodec.SeqMUS.Size(seq)
 	bs, err := json.Marshal(result)
 	if err != nil {
 		panic(err)
@@ -37,7 +37,7 @@ func ResultSize(seq core.Seq, result core.Result) (size int) {
 }
 
 func cmdSize[T any](seq core.Seq, dtm com.DTM, t T) (size int) {
-	size = cmdstream_codec.SeqMUS.Size(seq)
+	size = cscodec.SeqMUS.Size(seq)
 	size += dts.DTMSer.Size(dtm)
 	bs, err := json.Marshal(t)
 	if err != nil {

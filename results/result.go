@@ -1,3 +1,4 @@
+// Package results provides Results for integration tests.
 package results
 
 type Result struct {
